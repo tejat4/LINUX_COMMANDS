@@ -1,0 +1,1 @@
+The sed (stream editor) command is a powerful text processing tool in Linux that performs basic and advanced text transformations on an input stream. It reads text line by line, applies specified operations, and outputs the results. 
