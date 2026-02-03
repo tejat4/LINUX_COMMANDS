@@ -1,0 +1,35 @@
+The tar command in Linux is used to archive multiple files and directories into a single file. It doesn’t compress by itself, but it’s often combined with compression tools like gzip or bzip2. The resulting file is called a tarball (usually with .tar, .tar.gz, or .tar.bz2 extensions).
+Syntax:
+tar [options] archive_name.tar file1 file2 ..
+------Common Options
+Option	Meaning
+-c	Create a new archive
+-x	Extract files from an archive
+-v	Verbose (show progress)
+-f	Specify archive file name
+-z	Use gzip compression
+-j	Use bzip2 compression
+
+-----Create an archive
+tar -cvf backup.tar file1.txt file2.txt
+-c → create
+-v → show progress
+-f backup.tar → name of the archive
+This makes backup.tar containing file1.txt and file2.txt.....
+
+-----Create a compressed archive (gzip)
+tar -czvf backup.tar.gz myfolder/
+-z → compress with gzip
+This creates a compressed archive of myfolder....
+
+-----Extract an archive
+tar -xvf backup.tar
+Extracts all files from backup.tar into the current directory.
+
+------Extract a compressed archive
+tar -xzvf backup.tar.gz
+Extracts files from a gzip-compressed tarball.
+
+------Extract to a specific directory
+tar -xvf backup.tar -C /home/teja/extracted/
+Extracts files into /home/teja/extracted/
