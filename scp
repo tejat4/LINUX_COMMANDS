@@ -1,0 +1,21 @@
+The scp command in Linux stands for Secure Copy Protocol.
+It’s used to securely transfer files between computers over a network using SSH (Secure Shell).
+
+-----How scp Works
+It uses SSH for authentication and encryption, so your files are transferred securely.
+You can copy files:
+From local → remote
+From remote → local
+Between two remote hosts (via your local machine as a controller).
+
+------Syntax
+scp source destination
+
+-----Copy file from local to remote
+scp  file.txt  user@remote_host://home/destination_user_path
+
+------Copy file from remote to local
+scp user@remote_host:/home/user/file.txt  /local/directory/
+
+-----Copy a whole directory
+scp -r myfolder teja@192.168.1.50:/home/teja/
